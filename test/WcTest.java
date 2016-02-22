@@ -57,5 +57,11 @@ public class WcTest{
 		String text = "This is a sample text\n fil";
 		Wc t1 = new Wc(text);
 		assertEquals(2,t1.countLines());
+	}
+	@Test
+	public void countWords_counts_words_of_texts(){
+	String text = "This is a sample text file, We will be using it in our development of wc";
+		Wc t1 = new Wc(text);
+		assertEquals(16,t1.countWords());
 	}			
 }

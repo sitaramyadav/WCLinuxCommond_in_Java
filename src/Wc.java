@@ -17,4 +17,7 @@ public class Wc {
       }
       return counts;
 	}
+	public int countWords(){
+		return this.text.split("\\s+").length;
+	}	
 }
