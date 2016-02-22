@@ -4,7 +4,7 @@ import static org.junit.Assert.assertNotEquals;
 public class WcTest{
 
 	@Test
-	public void countChar_char_of_text(){
+	public void countChar_counts_char_of_text(){
 	String text = "This is a sample text file, We will be using it in our development of wc";
 		Wc t1 = new Wc(text);
 		assertEquals(72,t1.countChar());
@@ -44,5 +44,18 @@ public class WcTest{
 		String text = "This is a sample text file, We will be using it in our development of wc";
 		Wc t1 = new Wc(text);
 		assertEquals(72,t1.countBytes());
-	}	
+	}
+	@Test
+	public void countBytes_counts_bytes_of_special_charcters(){
+		String text = "This is a sample text file, We will be using it in our development of wc";
+		Wc t1 = new Wc("ÎÍÏÎ!@#$%^&*()_+:<>?");
+		assertEquals(24,t1.countBytes());
+	}
+
+	@Test
+	public void countLines_counts_lines_of_texts(){
+		String text = "This is a sample text\n fil";
+		Wc t1 = new Wc(text);
+		assertEquals(2,t1.countLines());
+	}			
 }
