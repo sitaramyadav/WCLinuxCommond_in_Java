@@ -1,0 +1,17 @@
+wc sample.txt
+    1      16      74 sample.txt
+-----------------------------------
+STEPS
+	read options/filenames
+		process.argv => filenames & options
+	process word,line,char counts
+		split by newline, split by non-words, find length
+	display results
+		formatted output by each requested option
+-----------------------------------
+Cases
+	wc sample.txt
+	wc -l sample.txt
+	wc -c sample.txt
+	wc -w sample.txt
+-----------------------------------
