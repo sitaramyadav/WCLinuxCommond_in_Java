@@ -6,4 +6,8 @@ public class Wc {
 	public int countChar(){
 		return this.text.length();
 	}
+	public int countBytes(){
+		final byte[] counts = this.text.getBytes();
+		return counts.length;
+	}
 }
